@@ -12,13 +12,20 @@ function setRulerLoc (rulerID, Loc) {
 }
 
 function getRulers() {
-	return [$('#ruler1').position().top,$('#ruler2').position().top, $('#ruler3').position().top]
+	rulers = [];
+	counter= 1;
+	$('.ruler').each(function(){
+		rulers.push($('#ruler'+counter).position().top);
+		counter++;
+	});
+	console.log(rulers);
+	return (rulers);
 }
 
-function setRulers(ruler1, ruler2, ruler3) {
-	$('#ruler1').css('top', ruler1);
-	$('#ruler2').css('top', ruler2);
-	$('#ruler3').css('top', ruler3);
+function setRulers(rulers) {
+	for (i=0;i<rulers.length;i++){
+		$('#ruler'+(i+1)).css('top', rulers[i]);
+	}
 }
 
 function setPage (page){
@@ -26,15 +33,21 @@ function setPage (page){
 }
 
 $(document).ready(function () {
+	$('body').mousedown(function(e) {
+		e.preventDefault();
+	});
+	
+	
 	$('.ruler').each(function () {
+		$(this).css('width', '100%');
 		$(this).mousedown(function(e){
 			e.preventDefault();
-
 			var mousey = $(this).position().top;
 			$ruler = $(this);
 			$(document).mousemove(function(e) {
 				if (e.pageY < $('#wrapper').height()){
-					$ruler.css('top', e.pageY);	
+					$ruler.css('top', e.pageY);
+					pyObj.handleMoved();
 				}
 			});
 		});

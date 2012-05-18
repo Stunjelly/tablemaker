@@ -26,113 +26,87 @@
          <string>about:blank</string>
         </url>
        </property>
+       <property name="zoomFactor">
+        <double>1.000000000000000</double>
+       </property>
       </widget>
-      <widget class="QWidget" name="">
+      <widget class="QWidget" name="layoutWidget">
        <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QGroupBox" name="rulerBox">
+          <property name="title">
+           <string>Rulers</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_3"/>
+         </widget>
+        </item>
         <item>
          <layout class="QHBoxLayout" name="horizontalLayout">
           <property name="sizeConstraint">
            <enum>QLayout::SetDefaultConstraint</enum>
           </property>
-          <item>
-           <widget class="QLabel" name="label">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="text">
-             <string>TextLabel</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QSpinBox" name="split1x"/>
-          </item>
-          <item>
-           <widget class="QSpinBox" name="split1y"/>
-          </item>
-          <item>
-           <widget class="QCheckBox" name="include1">
-            <property name="text">
-             <string>Include</string>
-            </property>
-            <property name="checked">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
          </layout>
         </item>
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_2">
-          <item>
-           <widget class="QLabel" name="label_2">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="text">
-             <string>TextLabel</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QSpinBox" name="split2x"/>
-          </item>
-          <item>
-           <widget class="QSpinBox" name="split2y"/>
-          </item>
-          <item>
-           <widget class="QCheckBox" name="include2">
-            <property name="text">
-             <string>Include</string>
-            </property>
-            <property name="checked">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-         </layout>
+         <widget class="QPushButton" name="addRuler">
+          <property name="text">
+           <string>Add Ruler</string>
+          </property>
+         </widget>
         </item>
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_3">
-          <item>
-           <widget class="QLabel" name="label_3">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="text">
-             <string>TextLabel</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QSpinBox" name="split3x"/>
-          </item>
-          <item>
-           <widget class="QSpinBox" name="split3y"/>
-          </item>
-          <item>
-           <widget class="QCheckBox" name="include3">
-            <property name="text">
-             <string>Include</string>
-            </property>
-            <property name="checked">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-         </layout>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
         </item>
         <item>
          <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QPushButton" name="zoomOut">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>30</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>-</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="zoomIn">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>30</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>+</string>
+            </property>
+           </widget>
+          </item>
           <item>
            <widget class="QPushButton" name="previous">
             <property name="text">
@@ -150,6 +124,13 @@
          </layout>
         </item>
         <item>
+         <widget class="QPushButton" name="chopPage">
+          <property name="text">
+           <string>Chop</string>
+          </property>
+         </widget>
+        </item>
+        <item>
          <widget class="QPushButton" name="makehtml">
           <property name="text">
            <string>Make HTML</string>
@@ -161,17 +142,6 @@
      </widget>
     </item>
    </layout>
-   <zorder>webView</zorder>
-   <zorder>label</zorder>
-   <zorder>split1x</zorder>
-   <zorder>split1y</zorder>
-   <zorder>layoutWidget</zorder>
-   <zorder>layoutWidget_2</zorder>
-   <zorder>label_2</zorder>
-   <zorder>previous</zorder>
-   <zorder>next</zorder>
-   <zorder>makehtml</zorder>
-   <zorder>splitter</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

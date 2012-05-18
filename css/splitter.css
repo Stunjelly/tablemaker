@@ -1,15 +1,15 @@
 body, html, div {margin: 0; padding: 0}
 
-#wrapper {position: relative; overflow: hidden; height: 100%;}
-#image {text-align: center;}
+#wrapper {position: relative;}
+#image {text-align: center; position: relative; padding: 0px;}
 #page {margin: 0 auto 0 auto; z-index: 1;}
 
 .ruler {width: 100%; height: 10px; position: absolute; z-index: 2;}
 .ruler:hover {padding-bottom: 4px;}
 
-#ruler1 {top: 25%;}
-#ruler2 {top: 50%;}
-#ruler3 {top: 75%;}
+#ruler1 {top: 100;}
+#ruler2 {top: 200;}
+#ruler3 {top: 300;}
 
 #ruler1 .line {background:#FF0000;}
 #ruler2 .line {background:#00FF00;}
